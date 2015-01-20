@@ -11,9 +11,6 @@ class SourceFile < Thor
     tag = select("Which tag do you want to fetch?", filtered_tags)
     self.destination_root = "vendor/assets"
     remote = "https://github.com/ivaynberg/select2"
-    get "#{remote}/raw/#{tag}/select2.png", "images/select2.png"
-    get "#{remote}/raw/#{tag}/select2x2.png", "images/select2x2.png"
-    get "#{remote}/raw/#{tag}/select2-spinner.gif", "images/select2-spinner.gif"
     get "#{remote}/raw/#{tag}/select2.css", "stylesheets/select2.scss"
     get "#{remote}/raw/#{tag}/select2-bootstrap.css", "stylesheets/select2-bootstrap.css"
     get "#{remote}/raw/#{tag}/select2.js", "javascripts/select2.js"
